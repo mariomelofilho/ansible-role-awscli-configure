@@ -22,6 +22,7 @@ This role work on RedHat, CentOS, Debian and Ubuntu distributions
   * 6 (*)
   * 7
   * 8
+  * 9 (Rocky Linux)
 * CentOS
   * 6 (*)
   * 7
@@ -126,11 +127,11 @@ If you have installed [AWS Command Line Interface (awscli)](https://docs.aws.ama
         vars:
           awscliconf_files:
             credentials:
-              - default:
+              - profile: "default"
                   aws_access_key_id: 'AKIAIOSFODNN7EXAMPLE'
                   aws_secret_access_key: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
             config:
-              - default:
+              - name: "default"
                   region: us-west-2
                   output: json
               - profile development:
